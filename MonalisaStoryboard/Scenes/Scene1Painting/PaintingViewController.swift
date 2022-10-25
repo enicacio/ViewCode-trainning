@@ -24,9 +24,9 @@ class PaintingViewController: UIViewController {
 
 extension PaintingViewController: PaintingViewDelegate {
     func colorButtonWasTapped(withColor color: UIColor) {
-        print("OK - \(color.accessibilityName)")
+        let viewController = ColorViewController()
+        viewController.color = color
+        present(viewController, animated: true)
     }
-    
-    
 }
 

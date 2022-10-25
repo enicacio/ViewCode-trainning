@@ -18,6 +18,8 @@
 		CA08C0DE28FEDC5D00B002C6 /* MonalisaStoryboardUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA08C0DD28FEDC5D00B002C6 /* MonalisaStoryboardUITestsLaunchTests.swift */; };
 		CA08C0EB28FEE18100B002C6 /* PaintingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA08C0EA28FEE18100B002C6 /* PaintingView.swift */; };
 		CA47B0F829017FD6003CC0CC /* ViewCodeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA47B0F729017FD6003CC0CC /* ViewCodeProtocol.swift */; };
+		CAFCC42B290817B7005A1424 /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFCC42A290817B7005A1424 /* ColorViewController.swift */; };
+		CAFCC42D29081B32005A1424 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFCC42C29081B32005A1424 /* UIColor+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		CA08C0DD28FEDC5D00B002C6 /* MonalisaStoryboardUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonalisaStoryboardUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CA08C0EA28FEE18100B002C6 /* PaintingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingView.swift; sourceTree = "<group>"; };
 		CA47B0F729017FD6003CC0CC /* ViewCodeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodeProtocol.swift; sourceTree = "<group>"; };
+		CAFCC42A290817B7005A1424 /* ColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorViewController.swift; sourceTree = "<group>"; };
+		CAFCC42C29081B32005A1424 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,11 +107,9 @@
 		CA08C0B928FEDC5B00B002C6 /* MonalisaStoryboard */ = {
 			isa = PBXGroup;
 			children = (
-				CA47B0F729017FD6003CC0CC /* ViewCodeProtocol.swift */,
-				CA08C0BA28FEDC5B00B002C6 /* AppDelegate.swift */,
-				CA08C0BC28FEDC5B00B002C6 /* SceneDelegate.swift */,
-				CA08C0BE28FEDC5B00B002C6 /* PaintingViewController.swift */,
-				CA08C0EA28FEE18100B002C6 /* PaintingView.swift */,
+				CAFCC42929081787005A1424 /* Utils */,
+				CAFCC42729081745005A1424 /* Application */,
+				CAFCC42F29081BC2005A1424 /* Scenes */,
 				CA08C0C028FEDC5B00B002C6 /* Main.storyboard */,
 				CA08C0C328FEDC5D00B002C6 /* Assets.xcassets */,
 				CA08C0C528FEDC5D00B002C6 /* LaunchScreen.storyboard */,
@@ -131,6 +133,50 @@
 				CA08C0DD28FEDC5D00B002C6 /* MonalisaStoryboardUITestsLaunchTests.swift */,
 			);
 			path = MonalisaStoryboardUITests;
+			sourceTree = "<group>";
+		};
+		CAFCC42729081745005A1424 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				CA08C0BA28FEDC5B00B002C6 /* AppDelegate.swift */,
+				CA08C0BC28FEDC5B00B002C6 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		CAFCC4282908175E005A1424 /* Scene1Painting */ = {
+			isa = PBXGroup;
+			children = (
+				CA08C0BE28FEDC5B00B002C6 /* PaintingViewController.swift */,
+				CA08C0EA28FEE18100B002C6 /* PaintingView.swift */,
+			);
+			path = Scene1Painting;
+			sourceTree = "<group>";
+		};
+		CAFCC42929081787005A1424 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CA47B0F729017FD6003CC0CC /* ViewCodeProtocol.swift */,
+				CAFCC42C29081B32005A1424 /* UIColor+Extensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		CAFCC42E29081BB2005A1424 /* Scene2Color */ = {
+			isa = PBXGroup;
+			children = (
+				CAFCC42A290817B7005A1424 /* ColorViewController.swift */,
+			);
+			path = Scene2Color;
+			sourceTree = "<group>";
+		};
+		CAFCC42F29081BC2005A1424 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				CAFCC4282908175E005A1424 /* Scene1Painting */,
+				CAFCC42E29081BB2005A1424 /* Scene2Color */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,6 +314,8 @@
 				CA08C0BB28FEDC5B00B002C6 /* AppDelegate.swift in Sources */,
 				CA47B0F829017FD6003CC0CC /* ViewCodeProtocol.swift in Sources */,
 				CA08C0EB28FEE18100B002C6 /* PaintingView.swift in Sources */,
+				CAFCC42D29081B32005A1424 /* UIColor+Extensions.swift in Sources */,
+				CAFCC42B290817B7005A1424 /* ColorViewController.swift in Sources */,
 				CA08C0BD28FEDC5B00B002C6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

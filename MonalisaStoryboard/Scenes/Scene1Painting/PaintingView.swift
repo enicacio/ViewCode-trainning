@@ -109,6 +109,8 @@ class  PaintingView: UIView {
         return stackView
     }()
     
+    // MARK: - Initializers
+    
     init(delegate: PaintingViewDelegate) {
         self.delegate = delegate
         super.init(frame: .zero)
@@ -116,26 +118,12 @@ class  PaintingView: UIView {
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    @objc
-    func buttonWasTapped(_ sender: UIButton) {
-        switch sender {
-        case buttonZero:
-            delegate?.colorButtonWasTapped(withColor: colors[0])
-        case buttonFirst:
-            delegate?.colorButtonWasTapped(withColor: colors[1])
-        case buttonSecond:
-            delegate?.colorButtonWasTapped(withColor: colors[2])
-        case buttonThird:
-            delegate?.colorButtonWasTapped(withColor: colors[3])
-        default: break
-        }
+        return nil
     }
 }
 
 extension PaintingView: ViewCodeProtocol {
+    
     func addSubviews() {
         addSubview(imageView)
         addSubview(paintingLabel)
@@ -189,5 +177,23 @@ extension PaintingView: ViewCodeProtocol {
         backgroundColor = .black
         divider.backgroundColor = .white
         stackView.backgroundColor = .white
+    }
+}
+
+extension PaintingView {
+    
+    @objc
+    func buttonWasTapped(_ sender: UIButton) {
+        switch sender {
+        case buttonZero:
+            delegate?.colorButtonWasTapped(withColor: colors[0])
+        case buttonFirst:
+            delegate?.colorButtonWasTapped(withColor: colors[1])
+        case buttonSecond:
+            delegate?.colorButtonWasTapped(withColor: colors[2])
+        case buttonThird:
+            delegate?.colorButtonWasTapped(withColor: colors[3])
+        default: break
+        }
     }
 }
